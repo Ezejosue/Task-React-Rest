@@ -4,11 +4,13 @@ import { useNavigate } from "react-router-dom"
 export function TaskCard({ task }) {
     const navigate = useNavigate()
     return (
-        <div onClick={() => {
-            navigate(`/task-delete/${task.id}`)
-        }}>
-            <h1>{task.title}</h1>
-            <p> {task.description} </p>
+        <div
+            className="bg-zinc-800 p-4 hover:bg-zinc-700 hover:cursor-pointer transition duration-300 ease-in-out"
+            onClick={() => {
+                navigate(`/task-delete/${task.id}`)
+            }}>
+            <h1 className="font-bold uppercase">{task.title}</h1>
+            <p className="text-slate-400"> {task.description} </p>
             <hr />
         </div>
     )
