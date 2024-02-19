@@ -6,12 +6,12 @@ import { Navigation } from './components/Navigation';
 function App() {
   return (
     <BrowserRouter>
-      <Navigation/>
+      <Navigation />
       <Routes>
-        <Route path='/' element={<Navigate to="/tasks" />}/>
-        <Route path='/tasks' element={<TasksPage/>}/>
-        <Route path='/task-create' element={<TaskFormPage/>}/>
-
+        <Route path='/' element={<Navigate to="/tasks" />} />
+        <Route path='/tasks' element={<TasksPage />} />
+        <Route path='/task-create' element={<TaskFormPage />} />
+        <Route path='/task-delete/:id' element={<TaskFormPage />} />
       </Routes>
     </BrowserRouter>
   );
